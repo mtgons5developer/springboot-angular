@@ -1,0 +1,12 @@
+<div class="container">
+  <h2>User List</h2>
+  <ul>
+    <li *ngFor="let user of users">
+      {{ user.name }}
+      <button (click)="deleteUser(user.id)">Delete</button>
+    </li>
+  </ul>
+
+  <input [(ngModel)]="newUser" placeholder="Enter user name">
+  <button (click)="addUser()">Add User</button>
+</div>
